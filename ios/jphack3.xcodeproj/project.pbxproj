@@ -48,6 +48,11 @@
 		7AE1E8841C0AB77100D341FC /* kojima.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AE1E8831C0AB77100D341FC /* kojima.png */; };
 		7AE1E8861C0AB7CB00D341FC /* usui.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AE1E8851C0AB7CB00D341FC /* usui.png */; };
 		7AE1E8881C0AC21F00D341FC /* Place_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AE1E8871C0AC21F00D341FC /* Place_icon.png */; };
+		7AE1E88A1C0AC58900D341FC /* Rectangle 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AE1E8891C0AC58900D341FC /* Rectangle 7.png */; };
+		7AE1E88C1C0AC91800D341FC /* musician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1E88B1C0AC91800D341FC /* musician.swift */; };
+		7AE1E88E1C0AC9D800D341FC /* musicianToStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1E88D1C0AC9D800D341FC /* musicianToStart.swift */; };
+		7AE1E8901C0AC9E500D341FC /* musicianToStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1E88F1C0AC9E500D341FC /* musicianToStop.swift */; };
+		7AE1E8921C0ACBDF00D341FC /* STOP Botton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AE1E8911C0ACBDF00D341FC /* STOP Botton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +189,11 @@
 		7AE1E8831C0AB77100D341FC /* kojima.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kojima.png; sourceTree = "<group>"; };
 		7AE1E8851C0AB7CB00D341FC /* usui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usui.png; sourceTree = "<group>"; };
 		7AE1E8871C0AC21F00D341FC /* Place_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Place_icon.png; sourceTree = "<group>"; };
+		7AE1E8891C0AC58900D341FC /* Rectangle 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 7.png"; sourceTree = "<group>"; };
+		7AE1E88B1C0AC91800D341FC /* musician.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = musician.swift; sourceTree = "<group>"; };
+		7AE1E88D1C0AC9D800D341FC /* musicianToStart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = musicianToStart.swift; sourceTree = "<group>"; };
+		7AE1E88F1C0AC9E500D341FC /* musicianToStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = musicianToStop.swift; sourceTree = "<group>"; };
+		7AE1E8911C0ACBDF00D341FC /* STOP Botton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STOP Botton.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,9 +254,14 @@
 				7AE1E7D01C0A19D600D341FC /* beaconViewController.swift */,
 				7AE1E8771C0AB3DA00D341FC /* afterBeaconViewController.swift */,
 				7AE1E8311C0AA78F00D341FC /* profileViewController.swift */,
+				7AE1E88B1C0AC91800D341FC /* musician.swift */,
+				7AE1E88D1C0AC9D800D341FC /* musicianToStart.swift */,
+				7AE1E88F1C0AC9E500D341FC /* musicianToStop.swift */,
 				7AE1E7A41C0A06FC00D341FC /* Main.storyboard */,
 				7AE1E7A71C0A06FC00D341FC /* Assets.xcassets */,
 				7AE1E7A91C0A06FC00D341FC /* LaunchScreen.storyboard */,
+				7AE1E8911C0ACBDF00D341FC /* STOP Botton.png */,
+				7AE1E8891C0AC58900D341FC /* Rectangle 7.png */,
 				7AE1E8871C0AC21F00D341FC /* Place_icon.png */,
 				7AE1E8831C0AB77100D341FC /* kojima.png */,
 				7AE1E8851C0AB7CB00D341FC /* usui.png */,
@@ -480,8 +495,10 @@
 				7AE1E8861C0AB7CB00D341FC /* usui.png in Resources */,
 				7AE1E81E1C0A7F0400D341FC /* Facebook.png in Resources */,
 				7AE1E82A1C0A94F300D341FC /* Botton_Map_icon.png in Resources */,
+				7AE1E8921C0ACBDF00D341FC /* STOP Botton.png in Resources */,
 				7AE1E7AB1C0A06FC00D341FC /* LaunchScreen.storyboard in Resources */,
 				7AE1E8801C0AB72300D341FC /* YutaSugiiProfile_image.png in Resources */,
+				7AE1E88A1C0AC58900D341FC /* Rectangle 7.png in Resources */,
 				7AE1E8241C0A88CD00D341FC /* tosa.png in Resources */,
 				7AE1E8231C0A88CD00D341FC /* tosa_circle.png in Resources */,
 				7AE1E7A81C0A06FC00D341FC /* Assets.xcassets in Resources */,
@@ -530,9 +547,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AE1E7D11C0A19D600D341FC /* beaconViewController.swift in Sources */,
+				7AE1E8901C0AC9E500D341FC /* musicianToStop.swift in Sources */,
 				7AE1E7A31C0A06FC00D341FC /* ViewController.swift in Sources */,
+				7AE1E88C1C0AC91800D341FC /* musician.swift in Sources */,
 				7AE1E8321C0AA78F00D341FC /* profileViewController.swift in Sources */,
 				7AE1E7CF1C0A193800D341FC /* MapViewController.swift in Sources */,
+				7AE1E88E1C0AC9D800D341FC /* musicianToStart.swift in Sources */,
 				7AE1E80F1C0A1DC900D341FC /* SwiftyJSON.swift in Sources */,
 				7AE1E8781C0AB3DA00D341FC /* afterBeaconViewController.swift in Sources */,
 				7AE1E7A11C0A06FC00D341FC /* AppDelegate.swift in Sources */,

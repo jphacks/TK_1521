@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  musician.swift
 //  jphack3
 //
 //  Created by Shoma Saito on 2015/11/29.
@@ -9,20 +9,19 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class musician: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var toMusician: UIImageView!
     
     var isCreate = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        NSUserDefaults.standardUserDefaults().setObject("token", forKey: "accesstoken")
-//        NSUserDefaults.standardUserDefaults().setObject("no", forKey: "error")
+        //        NSUserDefaults.standardUserDefaults().setObject("token", forKey: "accesstoken")
+        //        NSUserDefaults.standardUserDefaults().setObject("no", forKey: "error")
         
         
         var imageView: UIImageView!
@@ -41,9 +40,6 @@ class ViewController: UIViewController {
         simageView.userInteractionEnabled = true
         simageView.tag = 101
         self.view.addSubview(simageView)
-        
-        toMusician.userInteractionEnabled = true
-        toMusician.tag = 102
         
     }
     
@@ -66,14 +62,9 @@ class ViewController: UIViewController {
                 print(json["access_token"])
                 self.moveToMapView()
             }
-        }else if(touch!.view!.tag == 102){
-
-            let view: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("musician")
-            self.presentViewController(view, animated: false, completion: nil)
-            
         }else if(touch!.view!.tag == 101){
             print(101)
-            let params = ["loginName":"\(emailTextField.text!)","password":"\(passwordTextField.text!)","displayName": "sampleasdf","type": "user"]
+            let params = ["loginName":"\(emailTextField.text!)","password":"\(passwordTextField.text!)","major": "0","minor": "1","displayName": "sample","type": "musician"]
             
             Alamofire.request(.POST, "http://52.10.5.15:8000/v1/user/create", parameters: params, encoding: .JSON).responseString { response in
                 if(response.result.isSuccess){
@@ -120,7 +111,7 @@ class ViewController: UIViewController {
     
     
     func moveToMapView(){
-        let view: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("MapView") 
+        let view: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("musicianStart")
         self.presentViewController(view, animated: false, completion: nil)
     }
     
