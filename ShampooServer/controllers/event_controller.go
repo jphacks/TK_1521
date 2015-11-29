@@ -161,6 +161,32 @@ func (ctl *EventController) GetEvents(c web.C, w http.ResponseWriter, r *http.Re
 }
 
 func (ctl *EventController) DeleteEvent(c web.C, w http.ResponseWriter, r *http.Request) {
+	var eventVisitRawData models.EventVisitRawData
+	err := json.NewDecoder(r.Body).Decode(&eventVisitRawData)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+	ctl.getEventByBeacon(eventVisitRawData)
+	jsonData, err := ctl.getEventByBeacon(eventVisitRawData)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+	var eventResponse EventResponse
+
+	err = json.NewDecoder(bytes.NewReader(jsonData)).Decode(&eventResponse)
+	fmt.Println(eventResponse)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+	objectID := eventResponse.Id
+	err = ctl.deleteEvent(objectID, eventVisitRawData.AccessToken)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
 }
 
 func (ctl *EventController) getEventByBeacon(eventVisitRawData models.EventVisitRawData) ([]byte, error) {
