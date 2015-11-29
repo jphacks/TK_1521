@@ -42,8 +42,9 @@
 * Kii  
 
 #### フレームワーク・ライブラリ・モジュール
-* 
-* 
+* github.com/zenazn/goji
+* Alamofire
+* swifty-json
 
 #### デバイス
 * iPhone (iPadでも操作可能）  
